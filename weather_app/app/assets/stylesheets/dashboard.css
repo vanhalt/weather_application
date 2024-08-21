@@ -1,0 +1,262 @@
+.login-welcome-row {
+    margin-bottom: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
+}
+
+.welcome-message {
+    max-width: 24rem;
+}
+
+.logo {
+    height: 4rem;
+    margin: 0 auto;
+}
+
+.logo {
+    color: var(--primary);
+}
+
+.lines {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    display: flex;
+    gap: 1rem;
+    font-weight: bold;
+    align-items: center;
+}
+
+.line {
+    height: 2px;
+    flex: 1;
+    background: var(--border);
+}
+
+.text-field {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.text-field input {
+    color: var(--secondary);
+    max-width: 100%;
+    width: 100%;
+    border: 1px solid var(--border);
+    min-height: 3rem;
+    letter-spacing: 0.03rem;
+    outline: none;
+    background: var(--input-bg);
+    transition: 0.25s;
+    border-radius: 0.5rem;
+    text-indent: 1.25rem;
+}
+
+.text-field label {
+    color: var(--text);
+}
+
+.text-field input:user-invalid {
+    background: var(--white);
+    color: var(--error);
+    border: 1px solid var(--error);
+}
+
+.error-message {
+    display: none;
+}
+
+.text-field input:user-invalid ~ .error-message {
+    display: block;
+    margin-top: 0.25rem;
+    font-size: 0.8rem;
+    color: var(--error);
+}
+
+.text-field input:focus {
+    border: 1px solid var(--primary);
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 1px 4px 0px;
+}
+
+.my-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    position: relative;
+    gap: 1rem;
+    background: var(--white);
+    width: 100%;
+    max-width: 32rem;
+    padding: 3rem 2rem;
+    border-radius: 2rem;
+    box-shadow: rgba(99, 99, 99, 0.05) 0px 2px 8px 0px;
+    height: fit-content;
+}
+
+.my-form__button {
+    background: var(--primary);
+    color: white;
+    white-space: nowrap;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1rem;
+    line-height: 3.125rem;
+    outline: none;
+    font-size: 1.125rem;
+    letter-spacing: 0.025rem;
+    text-decoration: none;
+    cursor: pointer;
+    font-weight: 800;
+    min-height: 3.125rem;
+    width: 100%;
+    border-radius: 0.5rem;
+    transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease;
+}
+
+.my-form__button:hover {
+    background: var(--primary-dark);
+}
+
+/* my form actions */
+.my-form__actions {
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    width: 100%;
+    justify-content: space-between;
+    color: var(--secondary);
+    gap: 1rem;
+    margin-top: 0.5rem;
+}
+
+.my-form__actions a {
+    color: var(--secondary);
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.my-form__actions a:hover {
+    text-decoration: underline;
+}
+
+.my-form__row {
+    display: flex;
+    gap: 0.5rem;
+    justify-content: space-between;
+}
+
+.temperature-watchlist-container {
+    padding: 1.5rem;
+    max-width: 25rem;
+    width: 100%;
+    background-color: var(--white);
+    border-radius: 2rem;
+    margin: auto;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px;
+}
+
+.temperature-watchlist-container h2 {
+    margin-bottom: 1.5rem;
+    font-size: 1.3rem;
+    display: flex;
+    color: var(--gray-dark);
+    gap: 0.25rem;
+}
+
+.temperature-watchlist-container h2 svg {
+    width: 1.5rem;
+    height: 1.5rem;
+    color: var(--gray-dark);
+}
+
+#temperatures {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.temperature-row {
+    position: relative;
+    z-index: 1;
+    min-height: 3.75rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    border-radius: 1.5rem;
+    font-size: 1rem;
+    padding: 1rem;
+    align-items: center;
+    background-color: var(--white);
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px;
+}
+
+.temperature-row:hover {
+    cursor: grab;
+}
+
+.stock-avatar {
+    width: 3.75rem;
+    height: 3.75rem;
+    padding: 0.5rem;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.stock-name {
+    display: grid;
+    gap: 0.125rem;
+}
+
+.stock-name h3 {
+    font-size: large;
+}
+
+.stock-name p {
+    font-size: smaller;
+}
+
+.stock-chosen {
+    box-shadow: 8px 8px 32px var(--gray);
+}
+
+.stock-drag {
+    opacity: 0;
+}
+
+.stock-info {
+    margin-left: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.25rem;
+}
+
+.price {
+    color: var(--green);
+    font-weight: 800;
+}
+
+.price--negative {
+    color: var(--red);
+}
+
+.change {
+    padding: 0.25rem 0.5rem;
+    background-color: var(--green);
+    color: var(--white);
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    min-width: 3.75rem;
+    border-radius: 0.5rem;
+    font-weight: bold;
+}
+
+.change--negative {
+    background-color: var(--red);
+}

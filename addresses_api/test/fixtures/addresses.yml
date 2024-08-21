@@ -1,0 +1,13 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  region_code: MyString
+  administrative_area: MyString
+  locality: MyString
+  postal_code: MyString
+
+two:
+  region_code: MyString
+  administrative_area: MyString
+  locality: MyString
+  postal_code: MyString

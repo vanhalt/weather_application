@@ -1,0 +1,34 @@
+    <form class="my-form">
+    <div class="login-welcome-row">
+            <h1>Weather App</h1>
+        </div>
+        <div class="lines">
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+        <div class="text-field">
+            <label for="address">Location:</label>
+            <input
+                type="address" id="address" name="address"
+                autocomplete="off" placeholder="501 Twin Peaks Blvd, San Francisco"
+                required>
+            <div class="error-message">Wrong address</div>
+        </div>
+        <button type="submit" class="my-form__button">
+            Show Weather
+        </button>
+
+        <% if @weather_data.present? && !@weather_data.key?(:error) %>
+            <div id="weather_data">
+                <%= render partial: 'weather_data', locals: { weather_data: @weather_data} %>
+            </div>
+        <% elsif @weather_data.nil? %>
+            <div id="weather_data">
+                <i>weather data is gonna be shown here...</i>
+            </div>
+        <% elsif @weather_data.present? && @weather_data.key?(:error)  %>
+            <div id="weather_data">
+                <%= @weather_data[:error] %>
+            </div>
+        <% end %>
+    </form>
